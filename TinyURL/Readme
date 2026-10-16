@@ -1,1 +1,55 @@
+# TinyURL – System Design
 
+A URL shortener that converts a long URL into a short one of the form `http://bit.ab/<6-chars>`.
+
+```
+https://www.linkedin.com/in/saurabgyawalii
+                            ↓
+                    http://bit.ab/aB3xY9
+```
+
+---
+
+## 1. Requirement Analysis
+
+### A. Functional Requirements
+- **No login policy**: anyone can use the service without creating an account.
+- **Simple flow**: paste a long URL, get a short URL.
+- **No custom alias**: short codes are always system-generated.
+- **3-day expiry**: every short URL expires 3 days after creation.
+
+### B. Non-Functional Requirements
+- **Low latency** when fetching the long URL from a short URL (redirect must feel instant).
+- **Scale**: 1M monthly active users (MAU) / ~1M URLs.
+- **Unique shortening**: two different long URLs must never get the same short code.
+- **High availability**: the service should keep working even if individual components fail.
+
+---
+
+## 2. Identifying Entities
+
+| Entity | Description |
+|--------|-------------|
+| **User** | Anyone using the service (anonymous, no login) |
+| **Long URL** | The original URL submitted by the user |
+| **Short URL** | The generated `bit.ab/<6-chars>` link that maps to a long URL |
+
+## 3. API Design
+
+### Create a short URL
+
+---
+
+## 4. High Level Design
+
+```
+User  ──►  Server  ──►  Database
+```
+
+The user sends a long URL to the server, the server generates and stores the mapping in the database, and later resolves short codes back to long URLs.
+
+---
+
+## 5. Low Level Design
+
+![Low Level Design](./TinyURL-System-Design.png)
