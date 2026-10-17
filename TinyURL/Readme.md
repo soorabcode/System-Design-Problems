@@ -8,7 +8,6 @@ https://www.linkedin.com/in/saurabgyawalii
               http://bit.ab/aB3xY9
 ```
 
----
 
 ## 1. Requirement Analysis
 
@@ -26,8 +25,6 @@ https://www.linkedin.com/in/saurabgyawalii
 - **Unique shortening:** Two different long URLs must never get the same short code.
 - **High availability:** The service should keep working even if individual components fail.
 
----
-
 ## 2. Identifying Entities
 
 | Entity | Description |
@@ -40,7 +37,6 @@ https://www.linkedin.com/in/saurabgyawalii
 
 ### Create a short URL
 
----
 
 ## 4. High Level Design
 
@@ -50,10 +46,7 @@ User  ──►  Server  ──►  Database
 
 The user sends a long URL to the server, the server generates and stores the mapping in the database, and later resolves short codes back to long URLs.
 
----
 
 ## 5. Low Level Design
-
-![Low Level Design](./TinyURL-System-Design.png)
 
 ![Low Level Design](./TinyURL-System-Design.png)
