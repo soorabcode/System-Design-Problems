@@ -17,7 +17,7 @@ A Netflix-style OTT (over-the-top) streaming platform, designed end to end (requ
 | Concern | Target |
 |---|---|
 | Scale | 100M MAU, 10k videos |
-| Availability | Favour availability over consistency for browsing/streaming (CAP theorem, see [section 8](#8-cap-theorem-decisions)) |
+| Availability | Favour availability over consistency for browsing/streaming ( CAP theorem ) |
 | Search latency | < 2 ms |
 
 
@@ -25,7 +25,7 @@ A Netflix-style OTT (over-the-top) streaming platform, designed end to end (requ
 
 | Entity | Key fields |
 |---|---|
-| **User** | `id`, `name`, `email`, `password` (stored hashed), `subscription` |
+| **User** | `id`, `name`, `email`, `password` , `subscription` |
 | **Video** | `id`, `title`, `genre`, `description`, `cast`, `year`, `duration`, `tier`, `blob key`, `chunks` |
 
 
@@ -52,8 +52,6 @@ User → API Gateway → Services (Account, Subscription, Search, Watch) → Dat
 ## 6. Low-Level Design
 
 ![Low Level Design](OTT-Platform.jpg)]
-
-
 
 
 ## KeyPoints : 
