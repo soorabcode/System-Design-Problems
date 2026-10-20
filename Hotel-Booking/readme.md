@@ -1,6 +1,6 @@
-# Hotel Booking Platform (No-Login) — System Design
+# Hotel Booking Platform 
 
-A system design for a hotel booking platform that works **without user accounts**. A guest can search hotels, view details, book a room, and pay, using only contact details and a booking reference.
+A system design for a hotel booking platform that works without user accounts. A guest can search hotels, view details, book a room, and pay, using only contact details and a booking reference.
 
 ## 1. Requirement Analysis
 
@@ -49,7 +49,9 @@ GET /v1/payment={bookID} -> Payment Confirmation
 
 ## 4. High-Level Design
 
-**Flow:** `user -> API gateway -> services (search, view, book, payment) -> databases`
-
+`user -> API gateway -> services (search, view, book, payment) -> databases`
 
 ## 5. Low-Level Design
+
+
+![Hotel Bookinng Low-Level Design](Hotel-Booking.jpg)
