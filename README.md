@@ -9,25 +9,26 @@ A collection of practical System Design interview problems, covering the design 
 Each problem is organized into its own directory with a write-up, a design diagram, and a working Python implementation.
 
 
-| # | Problem | What you design | Key concepts | Solution |
-|---|---------|-----------------|--------------|----------|
-| 1 | **TinyURL: URL Shortener** | Convert long URLs into short links and redirect users to the original. | Hashing / ID generation, read-heavy caching, redirects | [View](./TinyURL) |
-| 2 | **Ticket Booking** | Browse events, select seats, and book tickets without double-booking. | Concurrency control, seat locking, transactions | [View](./Ticket-Booking) |
-| 3 | **E-Commerce** | Product search, cart, checkout, orders, and payments at scale. | Catalog search, inventory consistency, payment flow | [View](./E-Commerce) |
-| 4 | **OTT Platform** | Video streaming with accounts, subscription plans, search, and playback. | CDN, adaptive streaming, subscriptions, metadata store | [View](./OTT-Platform) |
-| 5 | **Hotel Booking** | Search, hotel details, booking, and payment with consistent reservations under load. | Availability search, double-booking prevention, payments | [View](./Hotel-Booking) |
-| 6 | **Food Delivery** | Nearby restaurants, search, menu, cart, payment, and order tracking. | Geo-search, order lifecycle, real-time tracking | [View](./Food-Delivery) |
-| 7 | **Chat App** | One-to-one messaging with delivery and read receipts, plus media. | WebSockets, message ordering, delivery guarantees | [View](./Chat-APP) |
-| 8 | **Search Engine** | Crawl, index, and serve search results with page views. | Inverted index, ranking, crawling, query serving | [View](./Search-Engine) |
-| 9 | **Job Scheduler** | Submit, schedule, and execute jobs reliably across workers. | Queues (Kafka), coordinator/worker model, retries | [View](./Job-Scheduler) |
-| 10 | **Ride Sharing** | Match riders with nearby drivers, calculate fares, track trips, and handle payment. | Geo-indexing, driver matching, live tracking, fare calculation | [View](./Ride-Sharing) |
-| 11 | **Social Media Platform** | Posts, follow graph, likes, and a personalized feed. | Feed generation (push vs pull), fan-out, graph storage | [View](./Social-Media) |
-| 12 | **Stock Trading Platform** | Login, watchlist, order placement, portfolio, and payments. | Order matching, real-time prices, consistency, auth | [View](./Stock-Trading) |
-| 13 | **Notification System** | Templates, user preferences, and delivery over SMS, email, and push. | Message queues, retries, rate limiting, preference rules | [View](./Notification-System) |
-| 14 | **Game Leaderboard** | Upload scores and serve top-K rankings across time windows in real time. | Sorted sets, top-K, time-window aggregation, real-time updates | [View](./Game-Leaderboard) |
-| 15 | **Collaborative Text Editor** | Multi-user real-time document editing, Google Docs style. | Operational transform / CRDTs, WebSockets, conflict resolution | [View](./Text-Editor) |
-
-More system design problems will be added as the collection grows.
+| # | Problem | Description | Solution |
+|---|---------|-------------|----------|
+| 1 | **TinyURL — URL Shortener** | Design a service that converts long URLs into short links and redirects users to the original URLs. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/TinyURL) |
+| 2 | **Ticket Booking** | Design a ticket booking platform where users can browse events, select seats, and book tickets without double-booking. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Ticket-Booking) |
+| 3 | **E-Commerce** | Design an e-commerce platform covering product search, cart, checkout, orders, and payments at scale. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/E-Commerce) |
+| 4 | **OTT Platform** | Design a video streaming platform with accounts, subscription plans, search, and video playback for millions of users. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/OTT-Platform) |
+| 5 | **Hotel Booking Platform** | Design a hotel booking system with search, hotel details, booking, and payment, ensuring consistent bookings under high load. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Hotel-Booking) |
+| 6 | **Food Delivery** | Design a food delivery platform with nearby restaurants, search, menus, cart, payment, and live order tracking. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Food-Delivery) |
+| 7 | **Search Engine** | Design a Google-style search engine with crawling, indexing, ranking, and fast search and page-view APIs. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Search-Engine) |
+| 8 | **Chat App** | Design a one-to-one messaging system with login, text/audio/video messages, and delivery and read receipts. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Chat-APP) |
+| 9 | **Job Scheduler** | Design a distributed job scheduler with job submission, search, queuing, coordination, and worker execution. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Job-Scheduler) |
+| 10 | **Collaborative Text Editor** | Design a Google Docs-style editor supporting real-time collaborative editing for multiple users. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Text-Editor) |
+| 11 | **Ride Sharing** | Design an Uber-style ride sharing platform with fare estimates, driver matching, live tracking, and payments. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Ride-Sharing) |
+| 12 | **Stock Trading Platform** | Design a Zerodha-style trading platform with watchlists, order placement, portfolio, and payments. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Stock-Trading) |
+| 13 | **Social Media Platform** | Design an Instagram-style social platform with posts, a personalized feed, follows, and likes. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Social-Media) |
+| 14 | **Game Leaderboard** | Design a real-time game leaderboard with score upload, top-K rankings, and daily, weekly, and all-time windows. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Game-LeaderBoard) |
+| 15 | **Notification System** | Design a notification and preference system with templates, user preferences, and SMS, email, and push delivery. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Notification-System) |
+| 16 | **Login System** | Design a login activity platform with client onboarding, file ingestion, Kafka and Flink streaming, and Elasticsearch search. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Login-System) |
+| 17 | **Payment Gateway** | Design a payment gateway with payment intents, sessions, checkout, and status tracking. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Payment-Gateway) |
+| 18 | **Cloud Storage** | Design a Dropbox-style cloud storage service with file upload, download, sync, and sharing. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Cloud-Storage) |
 
 
 The [System Design Syllabus](./System%20Design%20Syllabus.pdf) outlines the topics and concepts these problems are built around.
