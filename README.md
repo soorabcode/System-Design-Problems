@@ -8,28 +8,31 @@ A collection of practical System Design interview problems, covering the design 
 
 Each problem is organized into its own directory with a write-up, a design diagram, and a working Python implementation.
 
-
-| # | Problem | Description | Solution |
-|---|---------|-------------|----------|
-| 1 | **TinyURL — URL Shortener** | Design a service that converts long URLs into short links and redirects users to the original URLs. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/TinyURL) |
-| 2 | **Ticket Booking** | Design a ticket booking platform where users can browse events, select seats, and book tickets without double-booking. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Ticket-Booking) |
-| 3 | **E-Commerce** | Design an e-commerce platform covering product search, cart, checkout, orders, and payments at scale. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/E-Commerce) |
-| 4 | **OTT Platform** | Design a video streaming platform with accounts, subscription plans, search, and video playback for millions of users. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/OTT-Platform) |
-| 5 | **Hotel Booking Platform** | Design a hotel booking system with search, hotel details, booking, and payment, ensuring consistent bookings under high load. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Hotel-Booking) |
-| 6 | **Food Delivery** | Design a food delivery platform with nearby restaurants, search, menus, cart, payment, and live order tracking. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Food-Delivery) |
-| 7 | **Search Engine** | Design a Google-style search engine with crawling, indexing, ranking, and fast search and page-view APIs. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Search-Engine) |
-| 8 | **Chat App** | Design a one-to-one messaging system with login, text/audio/video messages, and delivery and read receipts. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Chat-APP) |
-| 9 | **Job Scheduler** | Design a distributed job scheduler with job submission, search, queuing, coordination, and worker execution. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Job-Scheduler) |
-| 10 | **Collaborative Text Editor** | Design a Google Docs-style editor supporting real-time collaborative editing for multiple users. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Text-Editor) |
-| 11 | **Ride Sharing** | Design an Uber-style ride sharing platform with fare estimates, driver matching, live tracking, and payments. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Ride-Sharing) |
-| 12 | **Stock Trading Platform** | Design a Zerodha-style trading platform with watchlists, order placement, portfolio, and payments. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Stock-Trading) |
-| 13 | **Social Media Platform** | Design an Instagram-style social platform with posts, a personalized feed, follows, and likes. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Social-Media) |
-| 14 | **Game Leaderboard** | Design a real-time game leaderboard with score upload, top-K rankings, and daily, weekly, and all-time windows. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Game-LeaderBoard) |
-| 15 | **Notification System** | Design a notification and preference system with templates, user preferences, and SMS, email, and push delivery. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Notification-System) |
-| 16 | **Login System** | Design a login activity platform with client onboarding, file ingestion, Kafka and Flink streaming, and Elasticsearch search. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Login-System) |
-| 17 | **Payment Gateway** | Design a payment gateway with payment intents, sessions, checkout, and status tracking. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Payment-Gateway) |
-| 18 | **Cloud Storage** | Design a Dropbox-style cloud storage service with file upload, download, sync, and sharing. | [View Solution](https://github.com/soorabcode/System-Design-Problems/tree/main/Cloud-Storage) |
-
+ 
+| # | Problem | Description | Scale | CAP Preference | Solution |
+|---|---------|-------------|-------|----------------|----------|
+| 1 | **TinyURL: URL Shortener** | Convert long URLs into unique 6-character short links with a 3-day expiry and fast redirects. | 1M MAU | High availability | [View](./TinyURL) |
+| 2 | **Ticket Booking** | Browse events, view listings, and book seats without double-booking. | 10M DAU | High availability | [View](./Ticket-Booking) |
+| 3 | **E-Commerce** | Login, product search and view, cart, checkout, payment, and order tracking. | 10M DAU, 10 orders/sec | High availability | [View](./E-Commerce) |
+| 4 | **OTT Platform** | Netflix-style streaming with accounts, subscription plans, search, and playback (StreamGate demo). | 100M MAU, 10K videos | AP | [View](./OTT-Platform) |
+| 5 | **Hotel Booking** | Account-free hotel search, details, booking, and payment that never double-books a room. | 100M DAU | Available for search, consistent for booking | [View](./Hotel-Booking) |
+| 6 | **Food Delivery** | Nearby restaurants, search, menus, cart, payment, and live order tracking with agent assignment. | 100M MAU | Available for browsing, consistent for orders and payment | [View](./Food-Delivery) |
+| 7 | **Search Engine** | Google-style web search with crawling, indexing, ranking, and search and view APIs. | ~10M sites | AP | [View](./Search-Engine) |
+| 8 | **Chat App** | WhatsApp-style 1:1 messaging with text, audio and video, and delivery and read receipts. | 10M users, 1000M+ messages | AP | [View](./Chat-APP) |
+| 9 | **Job Scheduler** | Distributed scheduler to create, monitor, and cancel jobs with at-least-once execution. | 10K jobs/sec | AP | [View](./Job-Scheduler) |
+| 10 | **Text Editor** | Google Docs-style editor with file creation, upload, versioning, and download. | 10M+ users | AP | [View](./Text-Editor) |
+| 11 | **Ride Sharing** | Uber-style fare estimates, ride categories, driver matching, live tracking, and payments. | 10M riders, 20K drivers | Riders AP, drivers CP | [View](./Ride-Sharing) |
+| 12 | **Stock Trading** | Zerodha-style live prices, buy orders, real-time watchlist, and portfolio dashboard. | 10M+ users | CP | [View](./Stock-Trading) |
+| 13 | **Social Media** | Instagram-style image posts, follow and unfollow, personalised feed, timeline, and likes. | 10M DAU | AP | [View](./Social-Media) |
+| 14 | **Game Leaderboard** | Real-time score upload, Top-K rankings, and hourly to all-time windows. | 1M requests/sec | AP | [View](./Game-LeaderBoard) |
+| 15 | **Notification System** | Multi-channel SMS, email, and push with dynamic templates, user preferences, and delivery reporting. | 1M notifications | AP | [View](./Notification-System) |
+| 16 | **Login System** | Login activity platform with multi-source ingestion, Kafka and Flink streaming, validation, and Elasticsearch search. | 10M+ users and events | AP | [View](./Login-System) |
+| 17 | **Payment Gateway** | Payment intents, short-lived secure card sessions, checkout, and status tracking. | 10K TPS | CP | [View](./Payment-Gateway) |
+| 18 | **Cloud Storage** | Dropbox-style upload of files and folders, multi-device sync, link sharing, and deletion. | Millions of users | AP | [View](./Cloud-Storage) |
+| 19 | **Ed-Tech Platform** | Udemy-style courses with enrollment, assessments, reviews, instructor onboarding, and course creation. | 100M+ users, 10K+ courses | AP | [View](./ed-Tech) |
+| 20 | **Email Delivery** | Gmail-style registration, send with `to`/`cc`/`bcc` and attachments, dashboard, and mailbox search. | 100M users, 1B emails | AP | [View](./Email-Delivery) |
+| 21 | **Rate Limiter** | Per-user, per-IP, per-key, and per-endpoint limits with burst handling and HTTP 429 responses. | 10K requests/sec | AP | [View](./Rate-Limiter) |
+| 22 | **Dating App** | Swipe-based app with no login (device ID is the identity): profiles, preferences, recommendations, left/right swipes, WebSocket chat with matches, and image upload. | Not specified | AP, instant swipes served from memory | [View](./Dating-APP) |
 
 The [System Design Syllabus](./System%20Design%20Syllabus.pdf) outlines the topics and concepts these problems are built around.
 
