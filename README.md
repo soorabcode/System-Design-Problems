@@ -8,7 +8,6 @@ A collection of practical System Design interview problems, covering the design 
 
 Each problem is organized into its own directory with a write-up, a design diagram, and a working Python implementation.
 
- 
 | # | Problem | Description | Scale | CAP Preference | Solution |
 |---|---------|-------------|-------|----------------|----------|
 | 1 | **TinyURL: URL Shortener** | Convert long URLs into unique 6-character short links with a 3-day expiry and fast redirects. | 1M MAU | High availability | [View](./TinyURL) |
@@ -33,6 +32,10 @@ Each problem is organized into its own directory with a write-up, a design diagr
 | 20 | **Email Delivery** | Gmail-style registration, send with `to`/`cc`/`bcc` and attachments, dashboard, and mailbox search. | 100M users, 1B emails | AP | [View](./Email-Delivery) |
 | 21 | **Rate Limiter** | Per-user, per-IP, per-key, and per-endpoint limits with burst handling and HTTP 429 responses. | 10K requests/sec | AP | [View](./Rate-Limiter) |
 | 22 | **Dating App** | Swipe-based app with no login (device ID is the identity): profiles, preferences, recommendations, left/right swipes, WebSocket chat with matches, and image upload. | Not specified | AP, instant swipes served from memory | [View](./Dating-APP) |
+| 23 | **ETA for Maps** | Estimated time of arrival for routes using map matching, a data aggregator, and an ETA prediction model. | 10M DAU | AP | [View](./ETA-FOR-MAP) |
+| 24 | **Predict Netflix Watch Time** | ML pipeline that predicts the next watch time for a movie or show using online and offline feature stores and a real-time prediction service. | 10M DAU | AP | [View](./Predict%20Netflix%20Watch%20Time) |
+| 25 | **Ranking Model (Instagram Feed)** | Feed ranking with candidate generation, ranking, and post-processing backed by a feature store and model training. | 10M DAU | AP | [View](./Ranking-Model) |
+
 
 The [System Design Syllabus](./System%20Design%20Syllabus.pdf) outlines the topics and concepts these problems are built around.
 
